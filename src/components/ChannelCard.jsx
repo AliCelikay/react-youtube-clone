@@ -10,6 +10,12 @@ const ChannelCard = ({channelDetail}) => (
         sx={{
             boxShadow: 'none',
             borderRadius: '20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: {xs: '356px', md: '320px'},
+            height: '326px',
+            margin: 'auto'
         }}
     >
         <Link to={`/channel/${channelDetail?.id?.channelId}`}>
@@ -22,6 +28,12 @@ const ChannelCard = ({channelDetail}) => (
                 {channelDetail?.snippet?.title}
                 <CheckCircle sx={{ fontSize: 14, color: 'gray', ml: '5px'}}/>
             </Typography>
+            {/* this will only show up on the specific channel page because only in channel page do have access to the statistics data from the api call */}
+            {channelDetail?.statistics?.subscriberCount && (
+                <Typography>
+                    {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
+                </Typography>
+            )}
             </CardContent>
         </Link>
     </Box>
