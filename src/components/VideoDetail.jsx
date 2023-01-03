@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { Typography, Box, Stack } from '@mui/material';
-import { CheckCircle, SettingsInputSvideoSharp } from '@mui/icons-material';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import { Videos } from './';
 import { fetchFromAPI } from '../utils/fetchFromApi';
@@ -49,7 +49,7 @@ const VideoDetail = () => {
                   color="#fff"
                 >
                   {channelTitle}
-                  <CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px' }} />
+                  <CheckCircleIcon sx={{ fontSize: '12px', color: 'gray', ml: '5px' }} />
                 </Typography>
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
