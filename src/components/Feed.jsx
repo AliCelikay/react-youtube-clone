@@ -11,13 +11,17 @@ import { fetchFromAPI } from '../utils/fetchFromApi';
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState('New')
+  const [videos, setVideos] = useState([])
+
   
   // a lifecycle hook that gets called when component initially loads
   useEffect(() => {
-
+    // async functions must chain a .then promise
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-    // empty dependency array so code will run only when we reload the page
-  }, []);
+      .then((data) => setVideos(data.items))
+
+    // selectedCategory as the dependency array so code will run only when a new category is selected
+  }, [selectedCategory]);
   
   
   return (
@@ -44,7 +48,7 @@ const Feed = () => {
         <Typography variant="h4" fontWeight="bold" mb={2} sx={{color: 'white'}}>
           {selectedCategory} <span style={{color: '#F31503'}}>Videos</span>
         </Typography>
-        <Videos videos={[]}/>
+        <Videos videos={videos}/>
       </Box>
     </Stack>
   )
