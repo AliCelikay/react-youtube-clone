@@ -1,7 +1,7 @@
 # React YouTube Clone
 
 ## Description
-This YouTube Clone Application ustilizes React.js, Material UI version 5, and RapidAPI YouTube v3. The website is a responsive application with video categories, channel pages with all the videos for a specific channel, video pages to watch specific videos with view count and like count, related videos, and a search bar to search for specific videos. Majority of the files are in JSX and I have advanced my skills in function components and reusability, advanced my knowledge of Material UI, and advanced fathcing data from an API.  
+This YouTube Clone Application utilizes React.js, Material UI version 5, and RapidAPI YouTube v3. The website is a responsive application with video categories, channel pages with all the videos for a specific channel, video pages to watch specific videos with view count and like count, related videos, and a search bar to search for specific videos. The majority of the files are in JSX, and I have advanced my skills in function components and reusability, advanced my knowledge of Material UI, and advanced fetching data from an API.
 
 ## Table of Contents
 * [Usage](#usage)
