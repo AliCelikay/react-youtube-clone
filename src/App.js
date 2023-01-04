@@ -16,7 +16,7 @@ const App = () => (
     >
         <Navbar/>
         <Routes>
-            {/* Root route; The exact prop above tells the Router component to match the path exactly. If you don't add the exact prop on the / path, it will match with all the routes starting with a '/', 
+            {/* Root route; The exact prop tells the Router component to match the path exactly. If you don't add the exact prop on the / path, it will match with all the routes starting with a '/', 
             eg: /about */}
             <Route path="/" exact element={<Feed/>}/>
             {/* specific video page */}
